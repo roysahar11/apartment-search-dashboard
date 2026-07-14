@@ -1,0 +1,338 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Apartment search — 17 listings</title>
+<style>
+  :root { color-scheme: light dark; }
+  body { font: 14px/1.45 -apple-system, system-ui, sans-serif; margin:0; background:#f4f4f6; color:#1a1a1c; }
+  @media (prefers-color-scheme: dark) { body{background:#161618;color:#e6e6ea;} .card{background:#242426 !important;} .summary{color:#d8d8dc;} }
+  header { position:sticky; top:0; z-index:9; background:#111; color:#fff; padding:11px 16px; display:flex; gap:14px; align-items:center; flex-wrap:wrap; }
+  header h1 { font-size:15px; margin:0; }
+  header select, header input { padding:4px 6px; border-radius:6px; border:1px solid #444; background:#222; color:#fff; font-size:13px; }
+  .note { opacity:.6; font-size:12px; }
+  .grid { display:grid; grid-template-columns:repeat(auto-fill,minmax(380px,1fr)); gap:14px; padding:16px; }
+  .card { display:flex; background:#fff; border-radius:12px; overflow:hidden; box-shadow:0 1px 4px rgba(0,0,0,.1); }
+  .score { flex:0 0 50px; display:flex; align-items:center; justify-content:center; font-size:21px; font-weight:700; color:#fff; }
+  .s-high .score{background:#1f9d55;} .s-mid .score{background:#d69e2e;} .s-low .score{background:#9aa4b2;}
+  .body { padding:10px 12px; min-width:0; flex:1; }
+  .titleline { display:flex; gap:8px; align-items:baseline; flex-wrap:wrap; }
+  .titleline a { font-weight:600; color:inherit; text-decoration:none; }
+  .titleline a:hover { text-decoration:underline; }
+  .recbadge { font-size:10.5px; font-weight:700; padding:2px 7px; border-radius:9px; color:#fff; }
+  .rec-good{background:#1f9d55;} .rec-mid{background:#d69e2e;} .rec-bad{background:#c53030;}
+  .tag { font-size:10.5px; padding:2px 7px; border-radius:9px; background:#e0e0e6; color:#333; }
+  .sub { font-size:12.5px; opacity:.85; margin:3px 0; } .src{opacity:.6;}
+  .flags { display:flex; gap:5px; flex-wrap:wrap; margin:4px 0; }
+  .flag { font-size:10.5px; padding:2px 6px; border-radius:8px; }
+  .flag.warn{background:#fef3c7;color:#92400e;} .flag.bad{background:#fecaca;color:#991b1b;}
+  .shots { display:flex; gap:4px; overflow-x:auto; margin:6px 0; }
+  .shots img { height:96px; border-radius:6px; object-fit:cover; flex:0 0 auto; }
+  .noimg { opacity:.5; font-size:12px; padding:16px; }
+  .summary { font-size:13px; margin:6px 0; }
+  .proscons { display:flex; flex-direction:column; gap:2px; margin-top:4px; }
+  .pc { display:flex; gap:6px; font-size:12px; }
+  .pc ul { margin:0; padding-left:15px; } .pc>b { width:12px; flex:0 0 12px; font-weight:700; }
+  .pros>b{color:#1f9d55;} .cons>b{color:#c53030;} .consider>b{color:#b8860b;}
+  .hidden { display:none !important; }
+</style></head><body>
+<header>
+  <h1>🏠 <span id="count">17</span> listings</h1>
+  <label class="note">min score <input type="number" id="ms" value="0" min="0" max="100" style="width:52px"></label>
+  <select id="tf"><option value="">all towns</option><option>Haifa</option><option>Herzliya</option><option>Tel Aviv</option></select>
+  <select id="sf"><option value="">all sources</option><option>airbnb</option></select>
+  <label class="note"><input type="checkbox" id="nf"> new (7d)</label>
+  <span class="note">last run: 2026-07-14 · contact details on the listing page</span>
+</header>
+<div class="grid" id="grid">
+
+    <div class="card s-mid" data-score="65" data-town="Haifa"
+         data-source="airbnb" data-added="2026-07-14">
+      <div class="score">65</div>
+      <div class="body">
+        <div class="titleline">
+          <a href="https://www.airbnb.com/rooms/862158035229266791" target="_blank" rel="noopener">Fellini-Yoga 2</a>
+          <span class="tag">needs review</span>
+        </div>
+        <div class="sub">Haifa · <b>₪3,902</b>/mo · 3 rooms · <span class="src">airbnb</span> · added 2026-07-14</div>
+        <div class="flags"></div>
+        <div class="shots"><img loading="lazy" src="https://a0.muscache.com/im/pictures/miso/Hosting-862158035229266791/original/c72c83e0-eb13-4f3b-ade3-1cee82977b80.jpeg"><img loading="lazy" src="https://a0.muscache.com/im/pictures/miso/Hosting-862158035229266791/original/8d6ce088-cd81-4dd7-bfed-1a8d1147db6a.jpeg"><img loading="lazy" src="https://a0.muscache.com/im/pictures/miso/Hosting-862158035229266791/original/6c8d1d80-7223-4368-865f-6d23acc0cba7.jpeg"><img loading="lazy" src="https://a0.muscache.com/im/pictures/miso/Hosting-862158035229266791/original/67be55cc-88bf-4462-ba81-882d94e2b159.jpeg"><img loading="lazy" src="https://a0.muscache.com/im/pictures/miso/Hosting-862158035229266791/original/b5a42bf7-874e-4702-b889-a5318e8329ab.jpeg"><img loading="lazy" src="https://a0.muscache.com/im/pictures/miso/Hosting-862158035229266791/original/68d82981-d933-4ce4-9229-b502594940a2.jpeg"><img loading="lazy" src="https://a0.muscache.com/im/pictures/miso/Hosting-862158035229266791/original/987da7af-ff69-4dd8-a15f-d49829d6596e.jpeg"><img loading="lazy" src="https://a0.muscache.com/im/pictures/miso/Hosting-862158035229266791/original/daf872a8-51fe-4516-be6a-8dd01d135fb0.jpeg"></div>
+        <div class="summary"></div>
+        <div class="proscons"></div>
+      </div>
+    </div>
+
+    <div class="card s-mid" data-score="64" data-town="Haifa"
+         data-source="airbnb" data-added="2026-07-14">
+      <div class="score">64</div>
+      <div class="body">
+        <div class="titleline">
+          <a href="https://www.airbnb.com/rooms/1675565738392231119" target="_blank" rel="noopener">A cozy nest in the very heart of the city + a refuge</a>
+          <span class="tag">needs review</span>
+        </div>
+        <div class="sub">Haifa · <b>₪3,936</b>/mo · 3 rooms · <span class="src">airbnb</span> · added 2026-07-14</div>
+        <div class="flags"></div>
+        <div class="shots"><img loading="lazy" src="https://a0.muscache.com/im/pictures/hosting/Hosting-1675565738392231119/original/6d55aa8b-6127-4d9f-b814-8a0af33f37f2.jpeg"><img loading="lazy" src="https://a0.muscache.com/im/pictures/hosting/Hosting-1675565738392231119/original/50e7cd02-e49b-424b-9fa6-c27ff51261ee.jpeg"><img loading="lazy" src="https://a0.muscache.com/im/pictures/hosting/Hosting-1675565738392231119/original/28d1e05a-cca2-426a-b9ab-ab28065d09ee.jpeg"><img loading="lazy" src="https://a0.muscache.com/im/pictures/hosting/Hosting-1675565738392231119/original/76f3b823-dd18-4a8f-894e-89df2842d3c8.jpeg"><img loading="lazy" src="https://a0.muscache.com/im/pictures/hosting/Hosting-1675565738392231119/original/52a92853-d93a-45f8-9ba4-1c0f3ced3cb1.jpeg"><img loading="lazy" src="https://a0.muscache.com/im/pictures/hosting/Hosting-1675565738392231119/original/d6505a70-267f-4e45-a9b9-c925dbbad962.jpeg"></div>
+        <div class="summary"></div>
+        <div class="proscons"></div>
+      </div>
+    </div>
+
+    <div class="card s-mid" data-score="59" data-town="Haifa"
+         data-source="airbnb" data-added="2026-07-14">
+      <div class="score">59</div>
+      <div class="body">
+        <div class="titleline">
+          <a href="https://www.airbnb.com/rooms/1680256455560325649" target="_blank" rel="noopener">Budget-Friendly City Gem | Easy Access</a>
+          <span class="tag">needs review</span>
+        </div>
+        <div class="sub">Haifa · <b>₪3,648</b>/mo · 2 rooms · <span class="src">airbnb</span> · added 2026-07-14</div>
+        <div class="flags"></div>
+        <div class="shots"><img loading="lazy" src="https://a0.muscache.com/im/pictures/hosting/Hosting-1680256455560325649/original/b1ea6b60-2be3-45b5-8869-276ecf7e3bbe.jpeg"><img loading="lazy" src="https://a0.muscache.com/im/pictures/hosting/Hosting-1680256455560325649/original/39212d01-42a7-4f6e-8e6f-5469b84e3484.jpeg"><img loading="lazy" src="https://a0.muscache.com/im/pictures/hosting/Hosting-1680256455560325649/original/20d1f23e-8428-4926-893b-ff0b50e2d0aa.jpeg"><img loading="lazy" src="https://a0.muscache.com/im/pictures/hosting/Hosting-1680256455560325649/original/abc57510-1c6a-48a6-b183-81de8a9b7096.jpeg"><img loading="lazy" src="https://a0.muscache.com/im/pictures/hosting/Hosting-1680256455560325649/original/1f93928d-67e1-48ea-8b38-e2540b284c77.jpeg"><img loading="lazy" src="https://a0.muscache.com/im/pictures/hosting/Hosting-1680256455560325649/original/d65181b7-ce3b-49ee-94dd-56e504065b9c.jpeg"></div>
+        <div class="summary"></div>
+        <div class="proscons"></div>
+      </div>
+    </div>
+
+    <div class="card s-mid" data-score="58" data-town="Haifa"
+         data-source="airbnb" data-added="2026-07-14">
+      <div class="score">58</div>
+      <div class="body">
+        <div class="titleline">
+          <a href="https://www.airbnb.com/rooms/929030337593950100" target="_blank" rel="noopener">PORT CITY HAIFA - studio 214</a>
+          <span class="tag">needs review</span>
+        </div>
+        <div class="sub">Haifa · <b>₪3,745</b>/mo · 2 rooms · <span class="src">airbnb</span> · added 2026-07-14</div>
+        <div class="flags"></div>
+        <div class="shots"><img loading="lazy" src="https://a0.muscache.com/im/pictures/prohost-api/Hosting-929030337593950100/original/ba45754a-82fb-4a26-8d25-80130c08560a.png"><img loading="lazy" src="https://a0.muscache.com/im/pictures/prohost-api/Hosting-929030337593950100/original/2336526a-d905-4dd4-abec-7904934dd228.jpeg"><img loading="lazy" src="https://a0.muscache.com/im/pictures/prohost-api/Hosting-929030337593950100/original/7ba9b56c-5c0f-444c-949c-04e511ed828a.png"><img loading="lazy" src="https://a0.muscache.com/im/pictures/prohost-api/Hosting-929030337593950100/original/0597bacc-f194-4b93-9dd6-ea8f0e0a27fb.png"><img loading="lazy" src="https://a0.muscache.com/im/pictures/prohost-api/Hosting-929030337593950100/original/54a49067-1c0e-4e89-b4cd-38355b64d543.png"><img loading="lazy" src="https://a0.muscache.com/im/pictures/prohost-api/Hosting-929030337593950100/original/94d757a0-c2df-46f7-9186-e45713807713.png"></div>
+        <div class="summary"></div>
+        <div class="proscons"></div>
+      </div>
+    </div>
+
+    <div class="card s-mid" data-score="58" data-town="Haifa"
+         data-source="airbnb" data-added="2026-07-14">
+      <div class="score">58</div>
+      <div class="body">
+        <div class="titleline">
+          <a href="https://www.airbnb.com/rooms/17958228" target="_blank" rel="noopener">Small but real kitchen, furnished, downtown Haifa — short-term OK</a>
+          <span class="recbadge rec-mid">MAYBE</span>
+        </div>
+        <div class="sub">Haifa · <b>₪4,484</b>/mo · 3 rooms · <span class="src">airbnb</span> · added 2026-07-14</div>
+        <div class="flags"></div>
+        <div class="shots"><img loading="lazy" src="https://a0.muscache.com/im/pictures/4c57fa51-0582-48f8-a706-0e700e22b83d.jpg"><img loading="lazy" src="https://a0.muscache.com/im/pictures/3d441ffe-f2bc-4418-a3e8-b2200bc50d87.jpg"><img loading="lazy" src="https://a0.muscache.com/im/pictures/6ca511c1-d6d8-48e4-832e-f95fe0097f2b.jpg"><img loading="lazy" src="https://a0.muscache.com/im/pictures/54cc8b51-18ed-4004-8976-f9101c83af43.jpg"><img loading="lazy" src="https://a0.muscache.com/im/pictures/6b59d525-2c79-4756-8bd5-67e92a859512.jpg"><img loading="lazy" src="https://a0.muscache.com/im/pictures/53a445b7-e2fe-4fef-936d-15055b4024ea.jpg"><img loading="lazy" src="https://a0.muscache.com/im/pictures/15671889-c404-451e-aa79-15ae02a16930.jpg"><img loading="lazy" src="https://a0.muscache.com/im/pictures/4f43b856-3201-4e3b-a315-301393e06fd8.jpg"></div>
+        <div class="summary">A genuine (if modest) kitchen: real L-shaped counter with prep space, full fridge/freezer and a countertop oven — but no built-in stovetop visible, so you&#x27;d bring a portable hob. Fully furnished one-bedroom, renovated, ground floor, explicitly rents short OR long term. Downtown Haifa near the port; walkable groceries and Metronit, ~1h train to Tel Aviv.</div>
+        <div class="proscons"><div class="pc pros"><b>+</b><ul><li>Real counter space + oven + full fridge (rare at this budget)</li><li>Fully furnished 1-bed, renovated</li><li>Explicitly short-term friendly</li><li>Walkable, car-free Haifa</li></ul></div><div class="pc cons"><b>–</b><ul><li>No built-in stovetop — need a portable hob</li><li>Ground floor downtown may be less quiet</li><li>₪4,484 is near the cap</li></ul></div><div class="pc consider"><b>?</b><ul><li>Confirm 2-month monthly rate (listed is per-night)</li><li>Ask if a stovetop/hotplate is provided</li><li>Check the exact street for noise</li></ul></div></div>
+      </div>
+    </div>
+
+    <div class="card s-mid" data-score="58" data-town="Herzliya"
+         data-source="airbnb" data-added="2026-07-14">
+      <div class="score">58</div>
+      <div class="body">
+        <div class="titleline">
+          <a href="https://www.airbnb.com/rooms/632977723714148174" target="_blank" rel="noopener">A private room for rent in a shared apartment</a>
+          <span class="tag">needs review</span>
+        </div>
+        <div class="sub">Herzliya · <b>₪4,157</b>/mo · 6 rooms · <span class="src">airbnb</span> · added 2026-07-14</div>
+        <div class="flags"></div>
+        <div class="shots"><img loading="lazy" src="https://a0.muscache.com/im/pictures/miso/Hosting-632977723714148174/original/f9a35c32-1519-4035-8535-e5ece9cb744a.jpeg"><img loading="lazy" src="https://a0.muscache.com/im/pictures/miso/Hosting-632977723714148174/original/2657d206-360f-4c16-b8d4-e8bda0653da3.jpeg"><img loading="lazy" src="https://a0.muscache.com/im/pictures/miso/Hosting-632977723714148174/original/576997f5-b646-4712-ae52-2c0a523bdd46.jpeg"><img loading="lazy" src="https://a0.muscache.com/im/pictures/miso/Hosting-632977723714148174/original/635fef50-b2a9-4c8a-8bbf-9aa8e1280100.jpeg"><img loading="lazy" src="https://a0.muscache.com/im/pictures/miso/Hosting-632977723714148174/original/3c36ce0d-aa59-46f0-8893-aff428f530bc.jpeg"><img loading="lazy" src="https://a0.muscache.com/im/pictures/miso/Hosting-632977723714148174/original/8fbe43e1-903b-4292-a370-e593079c4e81.jpeg"><img loading="lazy" src="https://a0.muscache.com/im/pictures/miso/Hosting-632977723714148174/original/a1fbece0-a521-417c-8c8a-e6c345e308b8.jpeg"><img loading="lazy" src="https://a0.muscache.com/im/pictures/miso/Hosting-632977723714148174/original/2989b560-9e79-4bdb-832b-ee4a4710a440.jpeg"></div>
+        <div class="summary"></div>
+        <div class="proscons"></div>
+      </div>
+    </div>
+
+    <div class="card s-mid" data-score="53" data-town="Haifa"
+         data-source="airbnb" data-added="2026-07-14">
+      <div class="score">53</div>
+      <div class="body">
+        <div class="titleline">
+          <a href="https://www.airbnb.com/rooms/929050388576979153" target="_blank" rel="noopener">PORT CITY HAIFA - Studio 218</a>
+          <span class="tag">needs review</span>
+        </div>
+        <div class="sub">Haifa · <b>₪4,164</b>/mo · 2 rooms · <span class="src">airbnb</span> · added 2026-07-14</div>
+        <div class="flags"></div>
+        <div class="shots"><img loading="lazy" src="https://a0.muscache.com/im/pictures/prohost-api/Hosting-929050388576979153/original/1bdc1188-c8d6-4b0d-ac99-dfde89b5149a.jpeg"><img loading="lazy" src="https://a0.muscache.com/im/pictures/prohost-api/Hosting-929050388576979153/original/a6b8be70-aa9d-42d0-aedc-ab21849b5d46.png"><img loading="lazy" src="https://a0.muscache.com/im/pictures/prohost-api/Hosting-929050388576979153/original/b0537fb1-3a4e-4cac-a9e6-814df80eae56.png"><img loading="lazy" src="https://a0.muscache.com/im/pictures/prohost-api/Hosting-929050388576979153/original/bb658fd6-d3c6-424e-9545-987c4a7aa632.png"><img loading="lazy" src="https://a0.muscache.com/im/pictures/prohost-api/Hosting-929050388576979153/original/b3ed6aef-f60f-4647-85a0-18b1ba9402fd.png"><img loading="lazy" src="https://a0.muscache.com/im/pictures/prohost-api/Hosting-929050388576979153/original/0d9e1ac0-6d00-4c88-a89c-97cd44ee8960.png"><img loading="lazy" src="https://a0.muscache.com/im/pictures/prohost-api/Hosting-929050388576979153/original/2c0e3970-458d-4f25-8350-ffbe9003af4d.png"><img loading="lazy" src="https://a0.muscache.com/im/pictures/prohost-api/Hosting-929050388576979153/original/8a86a232-390a-4681-9865-8340ef43c0fd.png"></div>
+        <div class="summary"></div>
+        <div class="proscons"></div>
+      </div>
+    </div>
+
+    <div class="card s-mid" data-score="53" data-town="Haifa"
+         data-source="airbnb" data-added="2026-07-14">
+      <div class="score">53</div>
+      <div class="body">
+        <div class="titleline">
+          <a href="https://www.airbnb.com/rooms/639467261062460271" target="_blank" rel="noopener">Rest &amp; work 
+Hifa</a>
+          <span class="tag">needs review</span>
+        </div>
+        <div class="sub">Haifa · <b>₪4,187</b>/mo · 2 rooms · <span class="src">airbnb</span> · added 2026-07-14</div>
+        <div class="flags"></div>
+        <div class="shots"><img loading="lazy" src="https://a0.muscache.com/im/pictures/miso/Hosting-639467261062460271/original/70d90558-f8c1-4eb2-8285-d86e7749308a.jpeg"><img loading="lazy" src="https://a0.muscache.com/im/pictures/miso/Hosting-639467261062460271/original/14419663-df9c-496d-ae8c-bd1e671b6426.jpeg"><img loading="lazy" src="https://a0.muscache.com/im/pictures/miso/Hosting-639467261062460271/original/a0989efb-6d83-45dc-bc6b-f720e81f7c5d.jpeg"><img loading="lazy" src="https://a0.muscache.com/im/pictures/miso/Hosting-639467261062460271/original/17ef9266-654e-4aee-8e9c-e1381ac70f14.jpeg"><img loading="lazy" src="https://a0.muscache.com/im/pictures/miso/Hosting-639467261062460271/original/5e7baebd-0492-478d-88ff-0830c354c4f4.jpeg"><img loading="lazy" src="https://a0.muscache.com/im/pictures/miso/Hosting-639467261062460271/original/3551daf9-2c94-4693-963b-8f7c339fd032.jpeg"><img loading="lazy" src="https://a0.muscache.com/im/pictures/miso/Hosting-639467261062460271/original/675ceee4-165e-40b1-a523-cca50c0da323.jpeg"><img loading="lazy" src="https://a0.muscache.com/im/pictures/miso/Hosting-639467261062460271/original/52ed0e47-015b-4a2d-a13b-850e65d254e1.jpeg"></div>
+        <div class="summary"></div>
+        <div class="proscons"></div>
+      </div>
+    </div>
+
+    <div class="card s-mid" data-score="52" data-town="Tel Aviv"
+         data-source="airbnb" data-added="2026-07-14">
+      <div class="score">52</div>
+      <div class="body">
+        <div class="titleline">
+          <a href="https://www.airbnb.com/rooms/764148165868743534" target="_blank" rel="noopener">Tiny TLV ; )</a>
+          <span class="tag">needs review</span>
+        </div>
+        <div class="sub">Tel Aviv · <b>₪3,942</b>/mo · 2 rooms · <span class="src">airbnb</span> · added 2026-07-14</div>
+        <div class="flags"></div>
+        <div class="shots"><img loading="lazy" src="https://a0.muscache.com/im/pictures/miso/Hosting-764148165868743534/original/067a934a-e53c-4091-812c-ed7da5c36fb2.jpeg"><img loading="lazy" src="https://a0.muscache.com/im/pictures/miso/Hosting-764148165868743534/original/1041dea3-7b01-458a-b2bb-9b2ef535b273.jpeg"><img loading="lazy" src="https://a0.muscache.com/im/pictures/miso/Hosting-764148165868743534/original/43e3291e-b2cb-4073-a26e-3d202ad837aa.jpeg"><img loading="lazy" src="https://a0.muscache.com/im/pictures/miso/Hosting-764148165868743534/original/ab649dcd-cb31-4cec-9eba-afc23d1eae0d.jpeg"><img loading="lazy" src="https://a0.muscache.com/im/pictures/miso/Hosting-764148165868743534/original/4f3dd4d1-e9c0-412b-9280-df6910d7de7f.jpeg"><img loading="lazy" src="https://a0.muscache.com/im/pictures/miso/Hosting-764148165868743534/original/d9d4cb34-5ed0-410f-8d96-789a6fa4392a.jpeg"><img loading="lazy" src="https://a0.muscache.com/im/pictures/miso/Hosting-764148165868743534/original/d84f6138-7e39-4bf8-9668-37c6dc5b6e5c.jpeg"></div>
+        <div class="summary"></div>
+        <div class="proscons"></div>
+      </div>
+    </div>
+
+    <div class="card s-mid" data-score="51" data-town="Haifa"
+         data-source="airbnb" data-added="2026-07-14">
+      <div class="score">51</div>
+      <div class="body">
+        <div class="titleline">
+          <a href="https://www.airbnb.com/rooms/1728965915794366332" target="_blank" rel="noopener">Cozy Budget Studio | 3rd Floor | Near Talpiot</a>
+          <span class="tag">needs review</span>
+        </div>
+        <div class="sub">Haifa · <b>₪4,339</b>/mo · 2 rooms · <span class="src">airbnb</span> · added 2026-07-14</div>
+        <div class="flags"></div>
+        <div class="shots"><img loading="lazy" src="https://a0.muscache.com/im/pictures/hosting/Hosting-1728965915794366332/original/c378de1e-b208-49cd-b412-6f5d4d07eb58.jpeg"><img loading="lazy" src="https://a0.muscache.com/im/pictures/hosting/Hosting-1728965915794366332/original/73cd4169-fa59-43c4-96b1-4acd15be9f6b.jpeg"><img loading="lazy" src="https://a0.muscache.com/im/pictures/hosting/Hosting-1728965915794366332/original/2b9e15b5-5a5c-478a-be74-64056477ee48.jpeg"><img loading="lazy" src="https://a0.muscache.com/im/pictures/hosting/Hosting-1728965915794366332/original/4199886e-bfe3-4fda-846e-a16dc05a8e42.jpeg"><img loading="lazy" src="https://a0.muscache.com/im/pictures/hosting/Hosting-1728965915794366332/original/a89f546b-25ea-431f-af55-2e48b39c80b9.jpeg"></div>
+        <div class="summary"></div>
+        <div class="proscons"></div>
+      </div>
+    </div>
+
+    <div class="card s-mid" data-score="50" data-town="Haifa"
+         data-source="airbnb" data-added="2026-07-14">
+      <div class="score">50</div>
+      <div class="body">
+        <div class="titleline">
+          <a href="https://www.airbnb.com/rooms/857761272329539223" target="_blank" rel="noopener">Fellini-Yoga 1</a>
+          <span class="tag">needs review</span>
+        </div>
+        <div class="sub">Haifa · <b>₪4,434</b>/mo · 2 rooms · <span class="src">airbnb</span> · added 2026-07-14</div>
+        <div class="flags"></div>
+        <div class="shots"><img loading="lazy" src="https://a0.muscache.com/im/pictures/miso/Hosting-857761272329539223/original/84cd48cd-98f5-41b5-982d-fead4d2a2c92.jpeg"><img loading="lazy" src="https://a0.muscache.com/im/pictures/miso/Hosting-857761272329539223/original/ba787882-5c4f-4852-b838-6426d6cad948.jpeg"><img loading="lazy" src="https://a0.muscache.com/im/pictures/miso/Hosting-857761272329539223/original/41904213-a389-4c33-bfea-ce3a78cc1522.jpeg"><img loading="lazy" src="https://a0.muscache.com/im/pictures/miso/Hosting-857761272329539223/original/3f4d7fe5-956f-44b5-8a0e-77ff79067d3a.jpeg"><img loading="lazy" src="https://a0.muscache.com/im/pictures/miso/Hosting-857761272329539223/original/50f1d6bb-d817-4d22-8706-90fa1cf68cdd.jpeg"><img loading="lazy" src="https://a0.muscache.com/im/pictures/miso/Hosting-857761272329539223/original/449b08b6-76ea-4591-ba42-1f4382229d2c.jpeg"><img loading="lazy" src="https://a0.muscache.com/im/pictures/miso/Hosting-857761272329539223/original/8e02c2ef-92d3-4628-86a4-a817e262f9ee.jpeg"><img loading="lazy" src="https://a0.muscache.com/im/pictures/miso/Hosting-857761272329539223/original/f5a0678f-8e18-4d26-b698-21a71f61d25c.jpeg"></div>
+        <div class="summary"></div>
+        <div class="proscons"></div>
+      </div>
+    </div>
+
+    <div class="card s-mid" data-score="50" data-town="Haifa"
+         data-source="airbnb" data-added="2026-07-14">
+      <div class="score">50</div>
+      <div class="body">
+        <div class="titleline">
+          <a href="https://www.airbnb.com/rooms/881222745251453143" target="_blank" rel="noopener">Fellini 66 (talpiot)</a>
+          <span class="tag">needs review</span>
+        </div>
+        <div class="sub">Haifa · <b>₪4,434</b>/mo · 2 rooms · <span class="src">airbnb</span> · added 2026-07-14</div>
+        <div class="flags"></div>
+        <div class="shots"><img loading="lazy" src="https://a0.muscache.com/im/pictures/hosting/Hosting-U3RheVN1cHBseUxpc3Rpbmc6ODgxMjIyNzQ1MjUxNDUzMTQz/original/9f78e1ae-e0ee-4dad-984c-a32d2011ec24.jpeg"><img loading="lazy" src="https://a0.muscache.com/im/pictures/miso/Hosting-881222745251453143/original/0163af88-881f-4212-a2a3-e2268066930e.jpeg"><img loading="lazy" src="https://a0.muscache.com/im/pictures/miso/Hosting-881222745251453143/original/b8918b53-4712-4129-a77b-b4e7a5e3fcc7.jpeg"><img loading="lazy" src="https://a0.muscache.com/im/pictures/miso/Hosting-881222745251453143/original/bbe6adbd-9f35-47e9-a62f-ef518d95736f.jpeg"><img loading="lazy" src="https://a0.muscache.com/im/pictures/miso/Hosting-881222745251453143/original/2ee26b88-0155-4020-8ef4-50b4f2129036.jpeg"><img loading="lazy" src="https://a0.muscache.com/im/pictures/miso/Hosting-881222745251453143/original/b05bcfe2-9a2d-40f5-8815-75eb929fca05.jpeg"><img loading="lazy" src="https://a0.muscache.com/im/pictures/miso/Hosting-881222745251453143/original/670e125a-9f2e-457e-9053-fe86eb89923e.jpeg"><img loading="lazy" src="https://a0.muscache.com/im/pictures/miso/Hosting-881222745251453143/original/9a588fc0-82ac-4fc9-a08c-6539877be474.jpeg"></div>
+        <div class="summary"></div>
+        <div class="proscons"></div>
+      </div>
+    </div>
+
+    <div class="card s-mid" data-score="50" data-town="Haifa"
+         data-source="airbnb" data-added="2026-07-14">
+      <div class="score">50</div>
+      <div class="body">
+        <div class="titleline">
+          <a href="https://www.airbnb.com/rooms/1613564328835718951" target="_blank" rel="noopener">8 Wingate</a>
+          <span class="tag">needs review</span>
+        </div>
+        <div class="sub">Haifa · <b>₪4,447</b>/mo · 2 rooms · <span class="src">airbnb</span> · added 2026-07-14</div>
+        <div class="flags"></div>
+        <div class="shots"><img loading="lazy" src="https://a0.muscache.com/im/pictures/hosting/Hosting-1613564328835718951/original/30e8a56a-2c6b-4bd9-a3ae-e893e7bcd028.png"><img loading="lazy" src="https://a0.muscache.com/im/pictures/hosting/Hosting-1613564328835718951/original/faa11aa9-1f8f-4313-8948-2d7aee0fac3f.jpeg"><img loading="lazy" src="https://a0.muscache.com/im/pictures/hosting/Hosting-1613564328835718951/original/9130991b-b87b-4899-88f2-abbc697d8754.jpeg"><img loading="lazy" src="https://a0.muscache.com/im/pictures/hosting/Hosting-1613564328835718951/original/b2c405e8-0035-4c5b-91b7-21fb3be9954d.jpeg"><img loading="lazy" src="https://a0.muscache.com/im/pictures/hosting/Hosting-1613564328835718951/original/e235b7b5-e998-4b19-bf7b-0a50e27627be.jpeg"><img loading="lazy" src="https://a0.muscache.com/im/pictures/hosting/Hosting-1613564328835718951/original/3c29a4da-3ef0-4d77-b8cd-3e38a8c39284.jpeg"><img loading="lazy" src="https://a0.muscache.com/im/pictures/hosting/Hosting-1613564328835718951/original/cbd9016d-9929-4122-bcc5-fca0f709a2d4.jpeg"><img loading="lazy" src="https://a0.muscache.com/im/pictures/hosting/Hosting-1613564328835718951/original/4b5f711b-8e5f-4944-9f89-16e57af82a31.jpeg"></div>
+        <div class="summary"></div>
+        <div class="proscons"></div>
+      </div>
+    </div>
+
+    <div class="card s-mid" data-score="50" data-town="Haifa"
+         data-source="airbnb" data-added="2026-07-14">
+      <div class="score">50</div>
+      <div class="body">
+        <div class="titleline">
+          <a href="https://www.airbnb.com/rooms/53397647" target="_blank" rel="noopener">Apartment in the city center Close to Baha&#x27;i Garde</a>
+          <span class="tag">needs review</span>
+        </div>
+        <div class="sub">Haifa · <b>₪4,478</b>/mo · 2 rooms · <span class="src">airbnb</span> · added 2026-07-14</div>
+        <div class="flags"></div>
+        <div class="shots"><img loading="lazy" src="https://a0.muscache.com/im/pictures/hosting/Hosting-53397647/original/f6422cbd-b0c1-453e-b1ea-b53e4c703ec5.jpeg"><img loading="lazy" src="https://a0.muscache.com/im/pictures/hosting/Hosting-53397647/original/40483d97-a396-4260-852b-9f9aec77446e.jpeg"><img loading="lazy" src="https://a0.muscache.com/im/pictures/hosting/Hosting-53397647/original/7fc02de9-c59c-47d1-b4b6-f826f6668b9e.jpeg"><img loading="lazy" src="https://a0.muscache.com/im/pictures/hosting/Hosting-53397647/original/fec425d4-486e-41e8-ac1b-76fed93f8607.jpeg"><img loading="lazy" src="https://a0.muscache.com/im/pictures/hosting/Hosting-53397647/original/1a90fa1f-0f1d-4748-a4d7-c4c6963ce8c9.jpeg"><img loading="lazy" src="https://a0.muscache.com/im/pictures/hosting/Hosting-53397647/original/2b2f5599-d780-4f32-abee-066bbc041b7f.jpeg"><img loading="lazy" src="https://a0.muscache.com/im/pictures/hosting/Hosting-53397647/original/6df5ae1f-99c1-4507-b481-455ce2a1fa1c.jpeg"><img loading="lazy" src="https://a0.muscache.com/im/pictures/97509db4-04d4-438b-b2a0-3bd67ee64a90.jpg"></div>
+        <div class="summary"></div>
+        <div class="proscons"></div>
+      </div>
+    </div>
+
+    <div class="card s-low" data-score="30" data-town="Haifa"
+         data-source="airbnb" data-added="2026-07-14">
+      <div class="score">30</div>
+      <div class="body">
+        <div class="titleline">
+          <a href="https://www.airbnb.com/rooms/746782279516331236" target="_blank" rel="noopener">Kitchenette + open-plan studio, no cooking or work separation — skip</a>
+          <span class="recbadge rec-bad">SKIP</span>
+        </div>
+        <div class="sub">Haifa · <b>₪3,130</b>/mo · 3 rooms · <span class="src">airbnb</span> · added 2026-07-14</div>
+        <div class="flags"></div>
+        <div class="shots"><img loading="lazy" src="https://a0.muscache.com/im/pictures/hosting/Hosting-U3RheVN1cHBseUxpc3Rpbmc6NzQ2NzgyMjc5NTE2MzMxMjM2/original/3adb583e-731e-46eb-9cac-23e677950980.jpeg"><img loading="lazy" src="https://a0.muscache.com/im/pictures/hosting/Hosting-U3RheVN1cHBseUxpc3Rpbmc6NzQ2NzgyMjc5NTE2MzMxMjM2/original/863eaeea-a76d-4304-9b59-8a0a2b6a4dee.jpeg"><img loading="lazy" src="https://a0.muscache.com/im/pictures/hosting/Hosting-U3RheVN1cHBseUxpc3Rpbmc6NzQ2NzgyMjc5NTE2MzMxMjM2/original/dd8e8337-d600-4c54-a185-fee7c6e43389.jpeg"><img loading="lazy" src="https://a0.muscache.com/im/pictures/hosting/Hosting-U3RheVN1cHBseUxpc3Rpbmc6NzQ2NzgyMjc5NTE2MzMxMjM2/original/30c5f3cd-077e-4560-baa6-768aadf4647d.jpeg"><img loading="lazy" src="https://a0.muscache.com/im/pictures/hosting/Hosting-U3RheVN1cHBseUxpc3Rpbmc6NzQ2NzgyMjc5NTE2MzMxMjM2/original/890bfe6c-218a-4c3a-873a-5a07d6677708.jpeg"><img loading="lazy" src="https://a0.muscache.com/im/pictures/hosting/Hosting-U3RheVN1cHBseUxpc3Rpbmc6NzQ2NzgyMjc5NTE2MzMxMjM2/original/b72c29e9-0b49-47dd-8aa3-cfec181b2f26.jpeg"><img loading="lazy" src="https://a0.muscache.com/im/pictures/hosting/Hosting-U3RheVN1cHBseUxpc3Rpbmc6NzQ2NzgyMjc5NTE2MzMxMjM2/original/6981416d-65a1-4a9a-a8d0-118827e2268f.jpeg"><img loading="lazy" src="https://a0.muscache.com/im/pictures/hosting/Hosting-U3RheVN1cHBseUxpc3Rpbmc6NzQ2NzgyMjc5NTE2MzMxMjM2/original/25381476-a46f-4a91-97a1-a647bc7ba0bf.jpeg"></div>
+        <div class="summary">&#x27;Fully equipped kitchenette&#x27; is a two-plate hotplate + microwave with almost no counter and no oven. Open-plan studio (beds in the living room) gives no privacy and no second spot for two remote workers&#x27; calls. Standout groceries (Talpiot shuk) but you can&#x27;t really cook or both work here.</div>
+        <div class="proscons"><div class="pc pros"><b>+</b><ul><li>Talpiot Market at the doorstep</li><li>Bright, clean main room</li><li>Furnished with real beds</li></ul></div><div class="pc cons"><b>–</b><ul><li>No oven/stovetop, minimal counter</li><li>Open-plan — no privacy, no second workspace</li><li>Noisy market/bar area</li></ul></div><div class="pc consider"><b>?</b><ul><li>Confirm 2-month rate</li><li>Ask about a real cooktop and any closable room</li></ul></div></div>
+      </div>
+    </div>
+
+    <div class="card s-low" data-score="24" data-town="Haifa"
+         data-source="airbnb" data-added="2026-07-14">
+      <div class="score">24</div>
+      <div class="body">
+        <div class="titleline">
+          <a href="https://www.airbnb.com/rooms/1060563478860309057" target="_blank" rel="noopener">Token kitchenette, single cramped room — skip</a>
+          <span class="recbadge rec-bad">SKIP</span>
+        </div>
+        <div class="sub">Haifa · <b>₪2,365</b>/mo · 2 rooms · <span class="src">airbnb</span> · added 2026-07-14</div>
+        <div class="flags"></div>
+        <div class="shots"><img loading="lazy" src="https://a0.muscache.com/im/pictures/miso/Hosting-1060563478860309057/original/c11a0b07-a0b0-4221-acfa-1317c991838b.jpeg"><img loading="lazy" src="https://a0.muscache.com/im/pictures/miso/Hosting-1060563478860309057/original/7dc220d6-64d1-49f9-b5cf-e8dbac98692e.jpeg"><img loading="lazy" src="https://a0.muscache.com/im/pictures/miso/Hosting-1060563478860309057/original/a85436eb-8e50-406e-a5d8-a34a56ca4d34.jpeg"><img loading="lazy" src="https://a0.muscache.com/im/pictures/miso/Hosting-1060563478860309057/original/ab503dcf-c65a-456b-9a1a-6fa073048fea.jpeg"><img loading="lazy" src="https://a0.muscache.com/im/pictures/miso/Hosting-1060563478860309057/original/a2b3e2eb-baf2-45dd-9d0d-da1c27bf9cbf.jpeg"><img loading="lazy" src="https://a0.muscache.com/im/pictures/miso/Hosting-1060563478860309057/original/938efba2-4394-4ccc-a1fa-7eee6dcdafad.jpeg"><img loading="lazy" src="https://a0.muscache.com/im/pictures/5778321e-6256-458b-b49c-fd5525c070c3.jpg"><img loading="lazy" src="https://a0.muscache.com/im/pictures/f5033232-3617-42af-b040-eb8a9c1ed921.jpg"></div>
+        <div class="summary">Photos show a shrink-wrapped portable hotplate, no oven, no real stovetop, essentially no counter — unworkable for a couple cooking most meals. It&#x27;s also one ~10-12 m² room with a single chair, so two people can&#x27;t both work. Great groceries (Talpiot shuk) and transport, but the core cook/live/work needs fail.</div>
+        <div class="proscons"><div class="pc pros"><b>+</b><ul><li>Very cheap (₪2,365)</li><li>Talpiot Market + vegan shop at the door</li><li>Metronit stop outside</li></ul></div><div class="pc cons"><b>–</b><ul><li>No oven/stovetop, no counter — token kitchenette</li><li>Single tiny room, one work spot</li><li>Busy, gritty market street</li></ul></div><div class="pc consider"><b>?</b><ul><li>Only worth it if they&#x27;ll add a real cooktop + it&#x27;s genuinely quiet</li></ul></div></div>
+      </div>
+    </div>
+
+    <div class="card s-low" data-score="24" data-town="Haifa"
+         data-source="airbnb" data-added="2026-07-14">
+      <div class="score">24</div>
+      <div class="body">
+        <div class="titleline">
+          <a href="https://www.airbnb.com/rooms/1060546169417428851" target="_blank" rel="noopener">Another Fellini kitchenette studio — skip</a>
+          <span class="recbadge rec-bad">SKIP</span>
+        </div>
+        <div class="sub">Haifa · <b>₪2,786</b>/mo · 2 rooms · <span class="src">airbnb</span> · added 2026-07-14</div>
+        <div class="flags"></div>
+        <div class="shots"><img loading="lazy" src="https://a0.muscache.com/im/pictures/2fc7dbb1-de76-4964-b4e2-96fdf6a7b0e8.jpg"><img loading="lazy" src="https://a0.muscache.com/im/pictures/099c0aac-312f-4c79-9420-e52f018c4768.jpg"><img loading="lazy" src="https://a0.muscache.com/im/pictures/401e20b6-b7d7-48f6-8a05-e73a9e5cddba.jpg"><img loading="lazy" src="https://a0.muscache.com/im/pictures/miso/Hosting-1060546169417428851/original/041eab72-4f21-4e3d-88c1-c3f8fc6440be.jpeg"><img loading="lazy" src="https://a0.muscache.com/im/pictures/3c68acd6-cf71-4287-aab0-0f8864a877cb.jpg"><img loading="lazy" src="https://a0.muscache.com/im/pictures/miso/Hosting-1060546169417428851/original/f991ae8a-d66b-4ebf-af48-fda38a60b822.jpeg"></div>
+        <div class="summary">Same Talpiot operator: a kitchenette without a real stovetop/oven and a single-room studio layout. Fine location (shuk + Metronit) but the same cook-and-work failures as its siblings.</div>
+        <div class="proscons"><div class="pc pros"><b>+</b><ul><li>Cheap (₪2,786)</li><li>Talpiot shuk + transport at the door</li></ul></div><div class="pc cons"><b>–</b><ul><li>Kitchenette, no real stovetop/oven</li><li>Single-room studio, one workspace</li></ul></div><div class="pc consider"><b>?</b><ul><li>Skip unless they&#x27;ll add a cooktop and it&#x27;s quiet</li></ul></div></div>
+      </div>
+    </div>
+</div>
+<script>
+  const g=document.getElementById('grid'), ms=document.getElementById('ms'),
+        tf=document.getElementById('tf'), sf=document.getElementById('sf'),
+        nf=document.getElementById('nf'), cnt=document.getElementById('count');
+  const weekAgo=new Date(Date.now()-7*864e5).toISOString().slice(0,10);
+  function apply() {
+    let n=0;
+    for (const c of g.children) {
+      let ok=(parseFloat(c.dataset.score)||0)>=(parseFloat(ms.value)||0);
+      if (tf.value && c.dataset.town!==tf.value) ok=false;
+      if (sf.value && c.dataset.source!==sf.value) ok=false;
+      if (nf.checked && (c.dataset.added||'')<weekAgo) ok=false;
+      c.classList.toggle('hidden',!ok); if(ok)n++;
+    }
+    cnt.textContent=n;
+  }
+  [ms,tf,sf,nf].forEach(e=>e.addEventListener('input',apply));
+</script>
+</body></html>
