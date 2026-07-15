@@ -1,6 +1,6 @@
 <!doctype html><html lang="en"><head><meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Apartment search — 129 listings</title>
+<title>Apartment search — 133 listings</title>
 <style>
   :root { color-scheme: light dark; }
   body { font: 14px/1.45 -apple-system, system-ui, sans-serif; margin:0; background:#f4f4f6; color:#1a1a1c; }
@@ -35,6 +35,7 @@
   .ctag { margin-left:8px; font-size:11px; opacity:.8; }
   .cost.over .ctag b { color:#c53030; }
   .cbreak { font-size:11.5px; opacity:.75; margin-top:2px; }
+  .cnote { opacity:.7; font-style:italic; }
   .curbtn { cursor:pointer; font-weight:600; }
   .summary { font-size:13px; margin:6px 0; }
   .proscons { display:flex; flex-direction:column; gap:2px; margin-top:4px; }
@@ -44,15 +45,15 @@
   .hidden { display:none !important; }
 </style></head><body>
 <header>
-  <h1>🏠 <span id="count">129</span> listings</h1>
+  <h1>🏠 <span id="count">133</span> listings</h1>
   <label class="note">min score <input type="number" id="ms" value="0" min="0" max="100" style="width:52px"></label>
-  <select id="tf"><option value="">all towns</option><option>Akko</option><option>Bat Yam</option><option>Binyamina</option><option>Gedera</option><option>Givatayim</option><option>Hadera</option><option>Haifa</option><option>Herzliya</option><option>Holon</option><option>Jerusalem</option><option>Kfar Saba</option><option>Kiryat Ata</option><option>Kiryat Bialik</option><option>Kiryat Ekron</option><option>Kiryat Motzkin</option><option>Kiryat Tivon</option><option>Kiryat Yam</option><option>Lod</option><option>Nahariya</option><option>Nesher</option><option>Netanya</option><option>Or Akiva</option><option>Pardes Hanna</option><option>Petah Tikva</option><option>Ramat Gan</option><option>Ramla</option><option>Rehovot</option><option>Rishon LeZion</option><option>Tel Aviv</option><option>Tirat Carmel</option><option>Yavne</option><option>Yokneam</option></select>
+  <select id="tf"><option value="">all towns</option><option>Akko</option><option>Atlit</option><option>Bat Yam</option><option>Binyamina</option><option>Gedera</option><option>Givatayim</option><option>Hadera</option><option>Haifa</option><option>Herzliya</option><option>Holon</option><option>Jerusalem</option><option>Kfar Saba</option><option>Kiryat Ata</option><option>Kiryat Bialik</option><option>Kiryat Ekron</option><option>Kiryat Motzkin</option><option>Kiryat Tivon</option><option>Kiryat Yam</option><option>Lod</option><option>Nahariya</option><option>Nesher</option><option>Netanya</option><option>Or Akiva</option><option>Pardes Hanna</option><option>Petah Tikva</option><option>Raanana</option><option>Ramat Gan</option><option>Ramla</option><option>Rehovot</option><option>Rishon LeZion</option><option>Tel Aviv</option><option>Tirat Carmel</option><option>Yavne</option><option>Yokneam</option></select>
   <select id="sf"><option value="">all sources</option><option>airbnb</option><option>facebook</option><option>homeless</option><option>telegram</option></select>
   <label class="note"><input type="checkbox" id="nf"> new (7d)</label>
   <label class="note"><input type="checkbox" id="bf"> ≤₪4,500 all-in</label>
   <button id="cur" class="curbtn">$ USD</button>
   <span class="note" id="fxnote"></span>
-  <span class="note">last run: 2026-07-15 · all-in = rent + arnona + est. utilities · contact on listing page</span>
+  <span class="note">last run: 2026-07-15 · all-in = rent + arnona + utilities (as stated in the ad, else estimated) · contact on listing page</span>
 </header>
 <div class="grid" id="grid">
 
@@ -158,6 +159,23 @@
       </div>
     </div>
 
+    <div class="card s-high" data-score="80" data-town="Haifa"
+         data-source="facebook" data-added="2026-07-15" data-total="2400">
+      <div class="score">80</div>
+      <div class="body">
+        <div class="titleline">
+          <a href="https://www.facebook.com/groups/1452527638328191/" target="_blank" rel="noopener">Haifa Technion 2-room, furnished, ₪2,400 all-in — covers all of Sept–Nov</a>
+          <span class="recbadge rec-good">PURSUE</span>
+        </div>
+        <div class="sub">Haifa · Technion / Gdalyahu St · <b><span class="money" data-ils="2400">₪2,400</span></b>/mo rent · <span class="src">facebook</span> · added 2026-07-15</div>
+        <div class="cost"><span class="ctotal"><span class="money" data-ils="2400">₪2,400</span>/mo all-in</span><span class="ctag">all-inclusive</span><div class="cbreak">landlord states arnona + utilities included</div></div>
+        <div class="flags"></div>
+        <div class="shots"><span class="noimg">no photos</span></div>
+        <div class="summary">Renovated, furnished, bright 2-room near the Technion (Gdalyahu St, 7 min from Canada Gate). Lease takeover 20.8–20.11, so it naturally runs across the whole target window. ₪2,400/mo all-inclusive except electricity — far under budget, the cheapest in-window whole-unit found on FB. Haifa has train to TA but it&#x27;s ~1h+ and the Technion sits up the Carmel (Metronit down to the station), so TA commuting is the weak point.</div>
+        <div class="proscons"><div class="pc pros"><b>+</b><ul><li>₪2,400 all-in except electricity — well under ₪4,500 cap</li><li>Exact fall window (20.8–20.11)</li><li>Furnished, renovated, spacious 2-room — whole unit for a couple</li><li>Quiet Technion-area residential; ~40 min to Hazorea family</li></ul></div><div class="pc cons"><b>–</b><ul><li>Haifa → TA is ~1h+ by train, and Technion is up the Carmel (bus/Metronit to reach the station)</li><li>Kitchen not shown — cookability unconfirmed</li><li>It&#x27;s a lease-assignment; landlord must accept the takeover</li></ul></div><div class="pc consider"><b>?</b><ul><li>Confirm real cookable kitchen (oven/stovetop/counter)</li><li>Confirm ~2-month Sept–Nov availability, exact price (₪2,400 + electricity) and that it&#x27;s the whole apartment</li><li>Ask realistic door-to-door time to central TA</li></ul></div></div>
+      </div>
+    </div>
+
     <div class="card s-high" data-score="78" data-town="Kiryat Motzkin"
          data-source="homeless" data-added="2026-07-14" data-total="4550">
       <div class="score">78</div>
@@ -172,6 +190,23 @@
         <div class="shots"><img loading="lazy" src="https://uploads.homeless.co.il/rent/202509/nvFile5051668.jpg"><img loading="lazy" src="https://uploads.homeless.co.il/rent/202509/550/nvFile5051669.jpg"><img loading="lazy" src="https://uploads.homeless.co.il/rent/202509/550/nvFile5051670.jpg"><img loading="lazy" src="https://uploads.homeless.co.il/rent/202509/550/nvFile5051672.jpg"><img loading="lazy" src="https://uploads.homeless.co.il/rent/202509/300/nvFile5051673.jpg"><img loading="lazy" src="https://uploads.homeless.co.il/rent/202509/300/nvFile5051674.jpg"><img loading="lazy" src="https://uploads.homeless.co.il/rent/202509/300/nvFile5051675.jpg"><img loading="lazy" src="https://uploads.homeless.co.il/rent/202606/300/nvFile5297431.jpg"></div>
         <div class="summary">The kitchen is genuinely good: an oak L-shaped kitchen with a stainless gas cooktop set into a dark granite counter with real prep space (and an oven almost certainly beneath) - the best pairing of a real cooking surface and counter in this cluster. It is fully furnished and very spacious (120 m2, 4 rooms) with a dedicated office room already set up with a desk and an ergonomic chair, ideal for two people working from laptops. It sits on Derech Akko, directly on the Metronit BRT spine (excellent car-free transit) and near the train - but that main road raises a noise question, the listing gives no short-term info, and 3,900 is the top of budget.</div>
         <div class="proscons"><div class="pc pros"><b>+</b><ul><li>Good real kitchen: gas cooktop + granite prep counter (and likely an oven below)</li><li>Fully furnished</li><li>120 m2, 4 rooms - very spacious</li><li>A dedicated office/work room already set up - great for two remote workers</li><li>On Derech Akko = directly on the Metronit line and near the train - excellent for a car-free couple</li></ul></div><div class="pc cons"><b>–</b><ul><li>3,900/mo - top of budget</li><li>Derech Akko is a busy main road - possible traffic noise (they value quiet)</li><li>Short-term availability unknown (no info in the listing)</li><li>Bedrooms have dated terrazzo; photos show a mid-move clutter</li><li>Photos 07-17 are &#x27;similar listings&#x27; contamination; only 00-06 are this unit</li></ul></div><div class="pc consider"><b>?</b><ul><li>Confirm ~2-month short-term availability - no info given, this is the key unknown</li><li>Ask whether the apartment faces the road or the quiet rear, and about noise/glazing</li><li>Confirm there is an oven under the cooktop and that the kitchen conveys as shown</li><li>Try to negotiate the 3,900 down given a short 2-month let</li></ul></div></div>
+      </div>
+    </div>
+
+    <div class="card s-high" data-score="78" data-town="Atlit"
+         data-source="facebook" data-added="2026-07-15" data-total="">
+      <div class="score">78</div>
+      <div class="body">
+        <div class="titleline">
+          <a href="https://www.facebook.com/groups/sublethacarmelbeach/" target="_blank" rel="noopener">Atlit private 2-room + yard, 3-month sublet, 5 min from the train</a>
+          <span class="recbadge rec-good">PURSUE</span>
+        </div>
+        <div class="sub">Atlit · <b>?</b>/mo rent · <span class="src">facebook</span> · added 2026-07-15</div>
+        
+        <div class="flags"></div>
+        <div class="shots"><span class="noimg">no photos</span></div>
+        <div class="summary">Private 2-room unit with a yard in a quiet, green village-like part of Atlit — a 3-month sublet with an extension option, so it easily spans Sept–Nov. Flagged as &#x27;5 min from the sea and the train&#x27;; Atlit is on the coastal rail line, giving genuine (if ~50–60 min) TA access, and Haifa-area prices are low so it plausibly fits budget. Price is DM-only, so the number and the kitchen still need confirming.</div>
+        <div class="proscons"><div class="pc pros"><b>+</b><ul><li>3-month + extension — comfortably covers Sept–Nov</li><li>Private unit with a yard, quiet &amp; green — matches their &#x27;quiet&#x27; priority</li><li>5 min walk to Atlit train (coastal line to TA)</li><li>Atlit is affordable — plausibly well under ₪4,500</li></ul></div><div class="pc cons"><b>–</b><ul><li>No price stated (DM only)</li><li>Kitchen not shown</li><li>~50–60 min by train to central TA</li></ul></div><div class="pc consider"><b>?</b><ul><li>Confirm price and that it&#x27;s ≤₪4,500 all-in</li><li>Confirm real cookable kitchen and that it&#x27;s a whole self-contained unit</li><li>Confirm exact start/end within Sept–Nov (they said flexible/3-month)</li></ul></div></div>
       </div>
     </div>
 
@@ -223,6 +258,23 @@
         <div class="shots"><img loading="lazy" src="https://uploads.homeless.co.il/rent/202507/1200/nvFile5007552.jpg"><img loading="lazy" src="https://uploads.homeless.co.il/rent/202507/550/nvFile5007553.jpg"><img loading="lazy" src="https://uploads.homeless.co.il/rent/202507/550/nvFile5007554.jpg"><img loading="lazy" src="https://uploads.homeless.co.il/rent/202507/550/nvFile5007555.jpg"><img loading="lazy" src="https://uploads.homeless.co.il/rent/202507/300/nvFile5007556.jpg"><img loading="lazy" src="https://uploads.homeless.co.il/rent/202507/300/nvFile5007557.jpg"><img loading="lazy" src="https://uploads.homeless.co.il/rent/202606/300/nvFile5283620.jpg"><img loading="lazy" src="https://uploads.homeless.co.il/rent/202510/300/nvFile5073815.jpeg"></div>
         <div class="summary">The kitchen is the real draw here: a freestanding gas range (oven plus gas cooktop), a microwave and a tall fridge in dated blue cabinetry - the only clearly-shown unit with both an oven and a hob, exactly the cooking capability this couple needs, though the counter is a single modest run rather than a big prep surface. The apartment is fully furnished (beds, wardrobes, sofa, dining table, washer, two AC units) and described as renovated on a quiet street, but it looks dated - blue kitchen, old terrazzo floors, patterned couch. At 40 m2 / 2.5 rooms and 2,400 it is the best-value genuine cook&#x27;s kitchen in this cluster.</div>
         <div class="proscons"><div class="pc pros"><b>+</b><ul><li>Real oven + gas cooktop + microwave - full cooking capability</li><li>Fully furnished</li><li>Cheap: 2,400/mo</li><li>40 m2, 2.5 rooms - a bit more room than the other cheap units</li><li>Quiet street, renovated per listing, shelter 80 m away</li><li>Kiryat Bialik - Metronit + train access</li></ul></div><div class="pc cons"><b>–</b><ul><li>Dated look: blue cabinets, old terrazzo, worn patterned furnishings</li><li>Kitchen counter / prep space is modest (single run)</li><li>Low floor in an older building</li><li>Photos 06-17 are &#x27;similar listings&#x27; contamination; only 00-05 are this unit</li></ul></div><div class="pc consider"><b>?</b><ul><li>Confirm ~2-month short-term availability (listed as annual/12 payments)</li><li>Confirm the gas range + microwave stay with the unit</li><li>Check walking distance from HaHagana St to the nearest Metronit stop and a supermarket</li><li>Ask whether a prep table can be added for more counter space</li></ul></div></div>
+      </div>
+    </div>
+
+    <div class="card s-high" data-score="74" data-town="Herzliya"
+         data-source="facebook" data-added="2026-07-15" data-total="">
+      <div class="score">74</div>
+      <div class="body">
+        <div class="titleline">
+          <a href="https://www.facebook.com/groups/rr.Sublet/" target="_blank" rel="noopener">Herzliya Neve Amal unit, 6.9–5.11 — exact 2-month window, has a workspace</a>
+          <span class="recbadge rec-good">PURSUE</span>
+        </div>
+        <div class="sub">Herzliya · Neve Amal · <b>?</b>/mo rent · <span class="src">facebook</span> · added 2026-07-15</div>
+        
+        <div class="flags"></div>
+        <div class="shots"><span class="noimg">no photos</span></div>
+        <div class="summary">Furnished housing unit in Neve Amal, a quiet &#x27;kibbutz-vibe&#x27; Herzliya neighborhood, offered exactly 6.9–5.11 (the couple&#x27;s 2-month window) while the owners travel. Photos show a desk + office chair, so there&#x27;s a real workspace for two remote workers, and it&#x27;s 15 min from Gaash beach/Herzliya marina. Price is DM-only (&#x27;reasonable price&#x27;); a suburban Herzliya unit plausibly fits budget, but Neve Amal is not walking-distance to Herzliya&#x27;s train, so TA access is bus-based.</div>
+        <div class="proscons"><div class="pc pros"><b>+</b><ul><li>Exact 6.9–5.11 window — no date negotiation needed</li><li>Real workspace (desk + chair) for two remote workers</li><li>Quiet, green, kibbutz-vibe neighborhood — matches &#x27;quiet&#x27; priority</li><li>Herzliya is well-located toward TA</li></ul></div><div class="pc cons"><b>–</b><ul><li>No price in post (&#x27;reasonable, DM&#x27;) — could still be over budget</li><li>Neve Amal → Herzliya train is a few km (bus, not walkable) — a factor if no car</li><li>Kitchen/size not shown</li></ul></div><div class="pc consider"><b>?</b><ul><li>Confirm price fits ≤₪4,500 (message Emuna [phone hidden])</li><li>Confirm real cookable kitchen and unit size</li><li>Ask about bus frequency to Herzliya station / TA if no car</li></ul></div></div>
       </div>
     </div>
 
@@ -580,6 +632,23 @@
         <div class="shots"><img loading="lazy" src="https://uploads.homeless.co.il/rent/202606/1200/nvFile5296742.jpg"><img loading="lazy" src="https://uploads.homeless.co.il/rent/202606/nvFile5296740.jpg"><img loading="lazy" src="https://uploads.homeless.co.il/rent/202606/nvFile5296738.jpg"><img loading="lazy" src="https://uploads.homeless.co.il/rent/202606/nvFile5296739.jpg"><img loading="lazy" src="https://uploads.homeless.co.il/rent/202606/300/nvFile5296741.jpg"><img loading="lazy" src="https://uploads.homeless.co.il/rent/202606/300/nvFile5296743.jpg"><img loading="lazy" src="https://uploads.homeless.co.il/rent/202606/300/nvFile5296744.jpg"><img loading="lazy" src="https://uploads.homeless.co.il/rent/202508/300/nvFile5035831.jpg"></div>
         <div class="summary">KITCHEN is the weak point: a compact one-wall kitchenette with taupe cabinets, a stainless sink, a modest counter and a full-height fridge, but no oven or stovetop visible in the photos — limited prep space for a couple who cooks most meals. Otherwise it is the nicest-feeling unit after Ramla: freshly renovated and bright, set in a lush garden, with a well-furnished bedroom that has a built-in desk niche (a real workspace for one laptop), a living room with a sofa, and an enclosed sun-porch entry. It sits at the top of the budget and is explicitly advertised as long-term.</div>
         <div class="proscons"><div class="pc pros"><b>+</b><ul><li>Renovated, bright and airy with a green garden outlook; two air directions</li><li>Built-in desk niche in the bedroom — a genuine work surface for one laptop</li><li>Well furnished (living room, bedroom, kitchen, balcony) and clean condition</li><li>Rishon LeZion has train + an incoming light rail → Tel Aviv ~30–40 min; residential/quiet</li></ul></div><div class="pc cons"><b>–</b><ul><li>Kitchen is a small kitchenette with limited counter and no visible oven/stovetop — against this couple&#x27;s #1 priority</li><li>₪4,500 — top of budget</li><li>Explicitly &#x27;long-term contract&#x27; and no smokers — a ~2-month let may be a hard sell</li><li>Further from the Gedera family than the Rehovot/Kiryat Ekron options; only one modest work surface for two remote workers</li></ul></div><div class="pc consider"><b>?</b><ul><li>Confirm a ~2-month (Sept–Nov 2026) stay is even possible — the ad states long-term, so this is the first thing to clear</li><li>Ask whether the kitchenette has a stovetop and/or oven, or only a sink + fridge</li><li>Check the second-laptop workspace situation (only one built-in desk shown)</li><li>Confirm the electricity-by-meter cost on top of the otherwise all-inclusive rent</li></ul></div></div>
+      </div>
+    </div>
+
+    <div class="card s-mid" data-score="55" data-town="Raanana"
+         data-source="facebook" data-added="2026-07-15" data-total="">
+      <div class="score">55</div>
+      <div class="body">
+        <div class="titleline">
+          <a href="https://www.facebook.com/groups/rr.Sublet/" target="_blank" rel="noopener">Raanana, all of September — in-window but thin on details</a>
+          <span class="recbadge rec-mid">MAYBE</span>
+        </div>
+        <div class="sub">Raanana · <b>?</b>/mo rent · <span class="src">facebook</span> · added 2026-07-15</div>
+        
+        <div class="flags"></div>
+        <div class="shots"><span class="noimg">no photos</span></div>
+        <div class="summary">A Raanana sublet advertised for &#x27;the whole of September, a bit before and after&#x27; — in scope and in-window. The post body was short/truncated in the feed, so size, rooms, price and kitchen weren&#x27;t captured. Worth a quick message to size it up, but low-confidence until the basics are known, and it may be September-only rather than a full 2 months.</div>
+        <div class="proscons"><div class="pc pros"><b>+</b><ul><li>In-window (all September)</li><li>Raanana is in scope with TA access</li></ul></div><div class="pc cons"><b>–</b><ul><li>No size, price, rooms or kitchen info captured</li><li>May be September-only, not a full 2-month Sept–Nov let</li><li>Raanana prices vary widely — fit uncertain</li></ul></div><div class="pc consider"><b>?</b><ul><li>Confirm it can do a ~2-month Sept–Nov stay (not just September)</li><li>Get price, size and whether there&#x27;s a real kitchen</li><li>Confirm it&#x27;s a whole unit, not a room</li></ul></div></div>
       </div>
     </div>
 
